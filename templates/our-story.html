@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Story — Café Framji</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700&family=Karla:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a href="index.html#top" class="brand">Café <span>Framji</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="{{ url_for('our_story') }}">Our Story</a></li>
+      <li><a href="{{ url_for('menu') }}">Menu</a></li>
+      <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+      <li><a href="{{ url_for('home') }}#visit">Visit</a></li>
+      <li><a href="{{ url_for('home') }}#booking" class="nav-cta">Reserve a table</a></li>
+    </ul>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <p class="eyebrow">Since 1962</p>
+    <h1>Three generations on Bhau Daji Road</h1>
+    <p>A wood-fired oven, four marble tables, and a family that never saw a reason to change either. Here's how Café Framji got from there to here.</p>
+  </div>
+</section>
+
+<section class="about">
+  <div class="wrap">
+    <div class="timeline">
+
+      <div class="timeline-item reveal">
+        <div class="t-marker">62</div>
+        <div class="t-body">
+          <div class="year">1962 — The founding</div>
+          <h3>Framji Irani sets up shop</h3>
+          <p>Framji arrived in Bombay with his brothers, like many Irani families before him, and took a lease on a corner plot in Fort. He brought four marble-top tables, a set of bentwood chairs bought secondhand from a closing bakery, and a wood-fired oven he'd have shipped in from Yazd. The oven is still here. So is one of the original chairs.</p>
+          <div class="t-photo">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Britannia_irani_cafe.jpg" alt="Old heritage building facade, Fort Mumbai style" loading="lazy">
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="t-marker">78</div>
+        <div class="t-body">
+          <div class="year">1978 — The mirrors go up</div>
+          <h3>A small renovation, mostly cosmetic</h3>
+          <p>Business was steady enough by the late seventies that Framji could afford to do what every Irani café owner eventually does: put mirrors on every wall. Not for vanity — regulars say it made the narrow room feel twice as big, and gave the waiters a way to see the whole floor without turning around.</p>
+          <div class="t-photo">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Irani_Cafe,_Matunga_-_panoramio.jpg" alt="Vintage mirror wall detail" loading="lazy">
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="t-marker">95</div>
+        <div class="t-body">
+          <div class="year">1995 — The second generation</div>
+          <h3>Framji's son, Rustom, takes the counter</h3>
+          <p>Rustom grew up doing homework at table two and took over full-time in the mid-nineties. He added the all-day breakfast menu — mostly because he was tired of customers asking for eggs at 4pm — and refused, on principle, every suggestion to introduce a espresso machine.</p>
+          <div class="t-photo">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/B.Merwan_Bakey.jpg" alt="Old bakery counter with jars" loading="lazy">
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="t-marker">15</div>
+        <div class="t-body">
+          <div class="year">2015 — The third generation</div>
+          <h3>Rustom's son steps in</h3>
+          <p>The current owner grew up assuming he'd do something else entirely, studied accountancy, and came back anyway. His one concession to modern running: a booking form, so regulars can hold a table on Sunday mornings instead of standing in the queue outside. Everything else stayed exactly as it was.</p>
+          <div class="t-photo">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Chai_bun_maska-Irani_cafe-pune,Maharashtra-008.jpg" alt="Morning queue outside a Mumbai cafe" loading="lazy">
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="t-marker">26</div>
+        <div class="t-body">
+          <div class="year">Today</div>
+          <h3>Same tables, same oven, same rule about outside food</h3>
+          <p>Sixty-two years on, the chai is still poured cutting-style if you ask, the bun maska still comes from the same oven Framji shipped in, and somebody at the next table is, statistically, arguing about cricket right now.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="checker"></div>
+
+<section class="testimonials">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow" style="color:var(--oxblood)">What we won't change</p>
+      <h2>The house rules</h2>
+    </div>
+    <div class="values-grid">
+      <div class="value-card reveal">
+        <h3>No outside food</h3>
+        <p>Framji's rule from day one. It's on a plaque by the door and nobody's ever successfully argued their way around it.</p>
+      </div>
+      <div class="value-card reveal">
+        <h3>Cash and common sense</h3>
+        <p>We take cards now, but the till is the same one Rustom used. Some habits are just hard to retire.</p>
+      </div>
+      <div class="value-card reveal">
+        <h3>Sit as long as you like</h3>
+        <p>No turning tables here. A pot of chai and a newspaper have always been a valid reason to stay till closing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="booking">
+  <div class="wrap teaser-center">
+    <p class="eyebrow" style="color:var(--oxblood)">Come see it yourself</p>
+    <h2 style="margin-bottom:24px;">Sixty-two years, one table waiting for you.</h2>
+    <a href="{{ url_for('home') }}#booking" class="btn btn-primary">Reserve a table</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h3>Café Framji</h3>
+        <p>14 Bhau Daji Road, Fort, Mumbai 400001<br>Irani café, since 1962.</p>
+      </div>
+      <div>
+        <h3>Hours</h3>
+        <ul>
+          <li>Mon – Sat: 7:30am – 9:30pm</li>
+          <li>Sunday: 8am – 9pm</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="{{ url_for('home') }}#top">Home</a></li>
+          <li><a href="{{ url_for('menu') }}">Full Menu</a></li>
+          <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">Café Framji is a fictional establishment created for demonstration purposes. Photos of real Irani cafes and dishes are used under Creative Commons licenses via Wikimedia Commons (Britannia &amp; Co., B. Merwan &amp; Co., and contributors) and are not photos of Café Framji itself. © 2026.</div>
+  </div>
+</footer>
+
+<script src="{{ url_for('static', filename='js/app.js') }}"></script> 
+</body>
+</html>

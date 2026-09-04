@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Café Framji — Irani Café, Fort, Mumbai · Est. 1962</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700&family=Karla:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<header>
+  <nav class="nav">
+    <<a href="{{ url_for('home') }}#top" class="brand">Café <span>Framji</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="{{ url_for('our_story') }}">Our Story</a></li> 
+      <li><a href="{{ url_for('menu') }}">Menu</a></li>
+      <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+      <li><a href="{{ url_for('home') }}#visit">Visit</a></li>
+      <li><a href="{{ url_for('home') }}#booking" class="nav-cta">Reserve a table</a></li>
+    </ul>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<div id="top"></div>
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <svg class="steam-cup" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path class="steam s1" d="M22 20 C20 16, 24 14, 22 10" stroke="#7A2E2E" stroke-width="2" stroke-linecap="round"/>
+      <path class="steam s2" d="M30 20 C28 16, 32 14, 30 10" stroke="#7A2E2E" stroke-width="2" stroke-linecap="round"/>
+      <path class="steam s3" d="M38 20 C36 16, 40 14, 38 10" stroke="#7A2E2E" stroke-width="2" stroke-linecap="round"/>
+      <path d="M14 26 H42 V36 C42 43 36.6 48 30 48 C23.4 48 18 43 18 36 V26 Z" stroke="#2B1D14" stroke-width="2"/>
+      <path d="M42 30 C48 30 48 40 42 40" stroke="#2B1D14" stroke-width="2"/>
+      <line x1="12" y1="49" x2="44" y2="49" stroke="#2B1D14" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+    <p class="eyebrow">Fort, Mumbai · Est. 1962</p>
+    <h1>Sit as long as the chai lasts.</h1>
+    <p>Marble tables, bentwood chairs, and a menu that hasn't needed much changing since your grandfather's time. Bun maska on the left, the day's papers on the right.</p>
+    <div class="btn-row">
+      <a href="{{ url_for('home') }}#booking"  class="btn btn-primary">Reserve a table</a>
+      <a href="{{ url_for('menu') }}" class="btn btn-outline">See the full menu</a>
+    </div>
+  </div>
+  <div class="checker"></div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="reveal">
+        <p class="eyebrow" style="color:var(--green)">Our story</p>
+        <h2>Three generations, one corner of Fort.</h2>
+        <p>Framji Irani opened the doors in 1962 with four marble tables and a wood-fired oven that still bakes the bread today. His grandson runs the counter now, though the mirrors on the wall, the glass jars of Osmania biscuits, and the "no outside food" plaque haven't moved an inch.</p>
+        <p>We're not a café that reinvents itself every season. Come for the kadak chai, stay because someone will eventually start talking to you about cricket.</p>
+        <div class="stats">
+          <div class="stat"><div class="num">62</div><div class="label">Years open</div></div>
+          <div class="stat"><div class="num">4</div><div class="label">Original tables</div></div>
+          <div class="stat"><div class="num">7am</div><div class="label">First pour, daily</div></div>
+        </div>
+        <div style="margin-top:32px;">
+          <a href="{{ url_for('our_story') }}" class="btn btn-outline">Read our full story →</a>
+        </div>
+      </div>
+      <div class="mirror-frame reveal">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Britannia_irani_cafe.jpg" alt="Britannia and Co, a real historic Irani cafe in Mumbai" loading="lazy">
+        <span class="cap">Café Framji, Bhau Daji Road</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="menu-section" id="menu">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">On the marble</p>
+      <h2>A few favourites</h2>
+      <p class="section-lead">A taste of what's on the chalkboard — the full spread lives on its own page.</p>
+    </div>
+    <div class="menu-teaser-grid">
+      <div class="teaser-card reveal">
+        <img class="photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Chai_bun_maska-Irani_cafe-pune,Maharashtra-008.jpg" alt="Irani chai served with bun maska" loading="lazy">
+        <div class="info"><div class="name">Irani Chai</div><div class="price">₹40</div></div>
+      </div>
+      <div class="teaser-card reveal">
+        <img class="photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Bun_Maska_Pav.jpg" alt="Bun maska, real photo" loading="lazy">
+        <div class="info"><div class="name">Bun Maska</div><div class="price">₹60</div></div>
+      </div>
+      <div class="teaser-card reveal">
+        <img class="photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Bun-Maska.jpg" alt="Brun maska, another angle" loading="lazy">
+        <div class="info"><div class="name">Brun Maska</div><div class="price">₹55</div></div>
+      </div>
+      <div class="teaser-card reveal">
+        <img class="photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Mawa_Cake.jpg" alt="Slice of mawa cake" loading="lazy">
+        <div class="info"><div class="name">Mawa Cake</div><div class="price">₹70</div></div>
+      </div>
+    </div>
+    <div class="teaser-center">
+      <a href="{{ url_for('menu') }}" class="btn btn-outline" style="border-color:var(--brass); color:var(--brass);">View full menu →</a>
+    </div>
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow" style="color:var(--oxblood)">A look inside</p>
+      <h2>Marble, mirrors, and the morning light</h2>
+    </div>
+    <div class="gallery-grid">
+      <div class="g-item tall reveal">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Irani_Cafe,_Matunga_-_panoramio.jpg" alt="Real Irani cafe interior with bentwood chairs and marble tables" loading="lazy">
+        <div class="g-cap">Bentwood chairs and marble tables</div>
+      </div>
+      <div class="g-item reveal">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Bun_Maska_Pav.jpg" alt="Bun maska, fresh, real photo" loading="lazy">
+        <div class="g-cap">Bun maska, fresh off the griddle</div>
+      </div>
+      <div class="g-item reveal">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/B.Merwan_Bakey.jpg" alt="A real Irani bakery counter" loading="lazy">
+        <div class="g-cap">The bakery counter</div>
+      </div>
+      <div class="g-item reveal">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mawa_Cake.jpg" alt="Mawa cake" loading="lazy">
+        <div class="g-cap">Mawa cake, from the counter</div>
+      </div>
+      <div class="g-item reveal">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Chai_bun_maska-Irani_cafe-pune,Maharashtra-008.jpg" alt="Chai served with bun maska" loading="lazy">
+        <div class="g-cap">Chai and bun maska, table-side</div>
+      </div>
+      <div class="g-item reveal">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Bun-Maska.jpg" alt="Bun maska, close up" loading="lazy">
+        <div class="g-cap">Bun maska, close up</div>
+      </div>
+    </div>
+    <div class="teaser-center" style="margin-top:40px;">
+      <a href="{{ url_for('gallery') }}" class="btn btn-outline">View full gallery →</a>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow" style="color:var(--oxblood)">What regulars say</p>
+      <h2>Word around the block</h2>
+    </div>
+    <div class="t-grid">
+      <div class="t-card reveal">
+        <p>"The bun maska here ruined every other café for me. I've tried. It doesn't work."</p>
+        <div class="who">— Rohan D., ten years a regular</div>
+      </div>
+      <div class="t-card reveal">
+        <p>"My father brought me here as a kid. I now bring my kids. Nothing has changed, and I mean that as the highest compliment."</p>
+        <div class="who">— Perin M., Fort resident</div>
+      </div>
+      <div class="t-card reveal">
+        <p>"Came for the chai, stayed for the argument about last night's match at the next table. Best free entertainment in Fort."</p>
+        <div class="who">— Aakash S., first-time visitor</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="booking" id="booking">
+  <div class="wrap">
+    <div class="booking-inner reveal">
+      <div class="booking-info">
+        <p class="eyebrow" style="color:var(--oxblood)">Reserve a table</p>
+        <h2>We'll hold your marble table.</h2>
+        <p>Walk-ins are always welcome, but if you're bringing a group or coming for a Sunday breakfast, it's worth booking ahead.</p>
+        <div class="info-line"><b>Hours</b><span>Mon–Sat, 7:30am – 9:30pm<br>Sunday, 8am – 9pm</span></div>
+        <div class="info-line"><b>Address</b><span>14 Bhau Daji Road, Fort, Mumbai 400001</span></div>
+        <div class="info-line"><b>Phone</b><span>+91 22 4021 5567</span></div>
+      </div>
+      <div>
+        <form id="bookingForm" method="POST" action="{{ url_for('booking') }}" novalidate> <!--chnged this line for flask/form  reservation-->
+          <div class="form-row">
+            <div>
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name">
+              <span class="error-msg" id="err-name"></span>
+            </div>
+            <div>
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" placeholder="10-digit number">
+              <span class="error-msg" id="err-phone"></span>
+            </div>
+          </div>
+          <div class="form-row">
+            <div>
+              <label for="date">Date</label>
+              <input type="date" id="date" name="date">
+              <span class="error-msg" id="err-date"></span>
+            </div>
+            <div>
+              <label for="time">Time</label>
+              <input type="time" id="time" name="time">
+              <span class="error-msg" id="err-time"></span>
+            </div>
+          </div>
+          <div>
+            <label for="guests">Guests</label>
+            <select id="guests" name="guests">
+              <option value="">Choose party size</option>
+              <option>1</option><option>2</option><option>3</option><option>4</option>
+              <option>5</option><option>6</option><option>7+</option>
+            </select>
+            <span class="error-msg" id="err-guests"></span>
+          </div>
+          <div>
+            <label for="message">Message <span style="text-transform:none; font-weight:400;">(optional)</span></label>
+            <textarea id="message" name="message" placeholder="Window seat, birthday, dietary notes..."></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Reserve a table</button>
+        </form>
+        <div class="success-slip" id="successSlip">
+          <div class="stamp">✓ RESERVED</div>
+          <p id="successText"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="checker light" id="visit"></div>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h3>Café Framji</h3>
+        <p>14 Bhau Daji Road, Fort, Mumbai 400001<br>Irani café, since 1962.</p>
+      </div>
+      <div>
+        <h3>Hours</h3>
+        <ul>
+          <li>Mon – Sat: 7:30am – 9:30pm</li>
+          <li>Sunday: 8am – 9pm</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="{{ url_for('home') }}#top">Home</a></li>
+          <li><a href="{{ url_for('menu') }}">Full Menu</a></li>
+          <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+          <li><a href="tel:+912240215567">+91 22 4021 5567</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">Café Framji is a fictional establishment created for demonstration purposes. Photos of real Irani cafes and dishes are used under Creative Commons licenses via Wikimedia Commons (Britannia &amp; Co., B. Merwan &amp; Co., and contributors) and are not photos of Café Framji itself. © 2026.</div>
+  </div>
+</footer>
+
+
+<script src="{{ url_for('static', filename='js/app.js') }}"></script> 
+<script>
+  // booking form validation
+  const form = document.getElementById('bookingForm');
+  const successSlip = document.getElementById('successSlip');
+  const successText = document.getElementById('successText');
+
+  function setError(id, msg){ document.getElementById('err-' + id).textContent = msg; }
+
+  form.addEventListener('submit', (e) => {
+    let valid = true;
+
+    const name = document.getElementById('name').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const date = document.getElementById('date').value;
+    const time = document.getElementById('time').value;
+    const guests = document.getElementById('guests').value;
+
+    ['name','phone','date','time','guests'].forEach(id => setError(id, ''));
+
+    if (!name){ setError('name', 'Please enter your name.'); valid = false; }
+    if (!/^[0-9]{10}$/.test(phone.replace(/\s|-/g, ''))){ setError('phone', 'Enter a valid 10-digit number.'); valid = false; }
+    if (!date){ setError('date', 'Pick a date.'); valid = false; }
+    else {
+      const chosen = new Date(date);
+      const today = new Date(); today.setHours(0,0,0,0);
+      if (chosen < today){ setError('date', "That date's already gone."); valid = false; }
+    }
+    if (!time){ setError('time', 'Pick a time.'); valid = false; }
+    if (!guests){ setError('guests', 'How many are joining?'); valid = false; }
+
+    if (!valid) return;
+
+    const dateObj = new Date(date + 'T' + time);
+    const formatted = dateObj.toLocaleDateString('en-IN', { weekday: 'long', day: 'numeric', month: 'long' });
+    const timeFormatted = dateObj.toLocaleTimeString('en-IN', { hour: 'numeric', minute: '2-digit' });
+
+    successText.textContent = `Table for ${guests} under "${name}" — ${formatted} at ${timeFormatted}. We'll see you at the door.`;
+    form.style.display = 'none';
+    successSlip.classList.add('show');
+  });
+</script>
+
+
