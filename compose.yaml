@@ -1,0 +1,55 @@
+# services:
+#   cafe-framji:
+#     build: .
+#     container_name: cafe-framji-container
+
+#     ports:
+#       - "5000:5000"
+
+#     env_file:
+#       - .env
+
+#     volumes:
+#       - cafe-framji-db-data:/app/data
+
+# volumes:
+#   cafe-framji-db-data:
+
+
+  
+# services:
+#   cafe-framji:
+#     build: .
+#     container_name: cafe-framji-container
+
+#     ports:
+#       - "5000:5000"
+
+#     env_file:
+#       - .env
+
+#     volumes:
+#       - ./data:/app/data
+
+
+
+
+
+
+services:
+  cafe-framji:
+    build: .
+    container_name: cafe-framji-container
+
+    ports:
+      - "5000:5000"
+
+    env_file:
+      - .env
+
+    volumes:
+      - cafe-framji-db-data:/app/data
+
+volumes:
+  cafe-framji-db-data:
+    external: true
